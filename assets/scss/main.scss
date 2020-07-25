@@ -1,0 +1,321 @@
+// DISCLAIMER:
+// First time using bootstrap. Mind couln't parse duality of
+// bootstrap classes and original CSS. The result was a
+// failure to abstract, manifested as un-DRY CSS,
+// poorly commented CSS, and a lack of semantic HTML.
+
+
+
+$newsweek-red: #f72210;
+$primary: $newsweek-red;
+$font-family-base: "Roboto Condensed", sans-serif;
+$theme-colors: (
+  "newsweek-red": $newsweek-red,
+  "subscribe": #ffe400
+);
+
+
+// Import Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+// GLOBAL
+
+html, body {
+  height: 100vh;
+  background: #f4f5f6;
+}
+
+.container-fluid {
+  background: #f4f5f6;
+}
+
+*, *::after, *::before {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.container-fluid, .container {
+  max-width: 1310px;
+}
+
+// NAVIGATION
+
+// Top Nav 
+
+// Middle Nav
+
+.block-title {
+  font-size: 16px;
+  line-height: 16px;
+  padding-bottom: 11px;
+}
+
+.card, .card img, .card .card-body {
+  border-radius: 0;
+}
+
+.story-text {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+// MAIN STORIES (Featured and Top stories)
+
+.main-story {
+  border: none;
+  padding-bottom: 20px;
+}
+
+.img-overlay {
+  position: relative;
+}
+
+.main-story-category, .ad-category {
+  box-sizing: content-box;
+  height: 33px;
+  width: auto;
+  padding: 0 20px;
+  background: #e7e9ec;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  vertical-align: middle;
+  text-transform: uppercase;;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 2;
+  
+}
+
+.ad-category {
+  color: #3581f4;
+}
+
+.ad-category:hover {
+  text-decoration: none;
+  color: #3581f4;
+}
+
+.main-story-category:hover {
+  text-decoration: none;
+}
+
+.main-story-title {
+  color: black;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.main-story-title:hover {
+  color: black;
+  text-decoration: $newsweek-red underline;
+}
+
+// SECONDARY STORIES (My Turn and Culture and Travel)
+
+.my-turn .card-title, .culture-travel .card-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0;
+  display: block;
+  line-height: 1.2;
+}
+
+.my-turn .card-title:hover, .culture-travel .card-title:hover {
+  text-decoration: none;
+}
+
+
+.media-title {
+  color: black;
+  font-size: 17px;
+  display: block;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.media-title:hover {
+  color: black;
+  text-decoration: $newsweek-red underline;
+}
+
+.vs {
+  border-radius: 50%;
+  background: black;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  vertical-align: bottom;
+  line-height: 2;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.vs-container {
+  text-align: center;
+  position: relative;
+}
+
+.vs-container::before {
+  position: absolute;
+  border-bottom: 5px double #d9d9d9;
+  width: 100%;
+  content: "";
+  top: 50%;
+  left: 0;
+}
+
+.sign-up {
+  background: #f4f5f6;
+}
+
+.debate img, .opinion img {
+  width: 63px;
+}
+
+.debate .title, .opinion .title, .opinion-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.debate .author, .debate .by, .opinion .author, .opinion .by {
+  text-transform: uppercase;
+}
+
+.debate .by, .opinion .by {
+  font-weight: lighter;
+  color: #555;
+}
+
+.title a, .opinion-title {
+  color: black;
+}
+
+.title a:hover, .opinion-title:hover {
+  color: black;
+  text-decoration: $newsweek-red underline;
+}
+
+.top-debater {
+  border-top: 4px solid #d9d9d9;
+}
+
+.bottom-debater {
+  border-bottom: 4px solid #d9d9d9;
+}
+
+.opinion-text span {
+  display: block;
+}
+
+.magazine .img-overlay {
+  position: relative;
+}
+
+.img-overlay .mag-red, .img-overlay .mag-white  {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.mag-red, .mag-white {
+  font-size: 16px;
+  line-height: 33px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+.mag-red:hover, .mag-white:hover {
+  text-decoration: none;
+}
+
+.mag-white:hover {
+  color: $newsweek-red
+}
+
+.mag-red {
+  background: $newsweek-red;
+  color: white;
+}
+
+.mag-white {
+  background: white;
+  color: red
+}
+
+.img-overlay .mag-white {
+  background: #e6e7e7;
+}
+
+.mag-title {
+  color: black;
+}
+
+.mag-title:hover {
+  color: black;
+  text-decoration: $newsweek-red underline;
+}
+
+.mag-link {
+  color: black;
+  background: #f4f5f6;
+  padding: 10px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mag-link:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.mag-link, .magazine .card-body {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.contents .media img {
+  width: 95px;
+}
+
+.contents .media .main-story-title {
+  font-size: 15px !important;
+}
+
+.section-header {
+  color: $newsweek-red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-header:hover {
+  color: $newsweek-red;
+  text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+  #navbarSupportContent {
+    border-left: 1px solid #dee2e6;
+  }
+
+}
+
+@media (min-width: 720px) {
+  .mag-icon {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .magazine .card, .e-pick .card {
+    max-width: 320px;
+    width: 25%;
+  }
+
+  .contents .card, .contents .media-group {
+    max-width: 395px;
+    width: 1/3%;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "newsweek",
+  "version": "1.0.0",
+  "description": "This [Odin Project](https://www.theodinproject.com/courses/html-and-css/lessons/using-bootstrap) introduces Bootstrap in the mock up of [Newsweek](https://www.newsweek.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}
